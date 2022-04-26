@@ -1,0 +1,36 @@
+{
+  "canisters": {
+    "test_signature_rings": {
+      "candid": "src/test_signature_rings/test_signature_rings.did",
+      "package": "test_signature_rings",
+      "type": "rust"
+    },
+    "test_signature_rings_assets": {
+      "dependencies": [
+        "test_signature_rings"
+      ],
+      "frontend": {
+        "entrypoint": "src/test_signature_rings_assets/src/index.html"
+      },
+      "source": [
+        "src/test_signature_rings_assets/assets",
+        "dist/test_signature_rings_assets/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "dfx": "0.9.3",
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    }
+  },
+  "version": 1
+}
